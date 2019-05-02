@@ -20,18 +20,16 @@
 					<div class="panel-heading">Forms</div>
 					<div class="panel-body">
 						<div class="col-md-6">
-							<form role="form">
+							<form role="form" method="POST" action="insert_admin.php" name="insert_admin">
 								<div class="form-group">
 									<label>Username</label>
-									<input class="form-control" placeholder="Placeholder">
+									<input class="form-control" placeholder="Placeholder" name="username">
 								</div>
 								<div class="form-group">
 									<label>Password</label>
-									<input type="password" class="form-control" placeholder="Placeholder">
+									<input type="password" class="form-control" placeholder="Placeholder" name="password">
 								</div>
-								
-								
-									<button type="submit" class="btn btn-primary">Submit Button</button>
+									<input type="submit" name="insert_admin" class="btn btn-primary">
 									<button type="reset" class="btn btn-default">Reset Button</button>
 								</div>
 							</form>

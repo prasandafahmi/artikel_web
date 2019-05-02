@@ -17,7 +17,6 @@ if(isset($_POST['login'])) {
  // login benar //
  $_SESSION['username'] = $username;
  $_SESSION['password'] = $password;
- $_SESSION['nama'] = $sess['nama'];
  ?><script language="JavaScript">
  alert('Anda berhasil login');
 document.location='dashboard.php'</script><?php

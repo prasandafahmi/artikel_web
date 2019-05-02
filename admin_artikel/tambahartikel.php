@@ -20,27 +20,27 @@
 					<div class="panel-heading">Forms</div>
 					<div class="panel-body">
 						<div class="col-md-6">
-							<form role="form">
+							<form role="form" method="POST" action="insert_artikel.php" name="insert_artikel" enctype="multipart/form-data">
 								<div class="form-group">
 									<label>Judul</label>
-									<input class="form-control" placeholder="Placeholder">
+									<input class="form-control" placeholder="Placeholder" name="judul">
 								</div>
 								<div class="form-group">
 									<label>Penulis</label>
-									<input class="form-control" placeholder="Placeholder">
+									<input class="form-control" placeholder="Placeholder" name="penulis">
 								</div>
 								<div class="form-group">
 									<label>ISI</label>
-									<textarea class="form-control" rows="3"></textarea>
+									<textarea class="form-control" rows="3" name="isi"></textarea>
 								</div>
 								
 								<div class="form-group">
 									<label>Gambar</label>
-									<input type="file">
+									<input type="file" name="gambar" id="gambar">
 									<p class="help-block">Example block-level help text here.</p>
 								</div>
 								
-									<button type="submit" class="btn btn-primary">Submit Button</button>
+									<input type="submit" class="btn btn-primary" name="insert_artikel">Submit Button
 									<button type="reset" class="btn btn-default">Reset Button</button>
 								</div>
 							</form>

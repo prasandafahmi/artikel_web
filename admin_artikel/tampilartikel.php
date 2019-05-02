@@ -2,6 +2,12 @@
 include "koneksi.php";
 include "dashboard.php";
 ?>
+<style type="text/css">
+	img{
+		width: 60px;
+		height: 60px;
+	}
+</style>
 <center>
 	<table border=1>
 		<tr>
@@ -24,7 +30,7 @@ while($var=mysql_fetch_array($query)) { ?>
 	<td><?php echo $var['judul']; ?></td>
 	<td><?php echo $var['penulis']; ?></td>
 	<td><?php echo $var['isi']; ?></td>
-	<td><?php echo $var['gambar']; ?></td>
+	<td><img src="../img/gambar/<?php echo $var['gambar']; ?>"></td>
 	<td><?php echo $var['tanggal']; ?></td>
 		<td>
 			<center>
