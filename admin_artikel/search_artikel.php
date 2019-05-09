@@ -36,10 +36,23 @@ include "dashboard.php";
 			<td><b><center>Edit</td>
 		</tr>
 
-<?php
-$query=mysql_query("SELECT * FROM artikel ORDER BY id_artikel");
-$no=1;
-while($var=mysql_fetch_array($query)) { ?>
+<?php 
+if(isset($_GET['cari'])){
+	$cari = $_GET['cari'];
+	echo "<b>Hasil pencarian : ".$cari."</b>";
+}
+?>
+
+<?php 
+	if(isset($_GET['cari'])){
+		$cari = $_GET['cari'];
+		$query = mysql_query("SELECT * from admin where username like '%".$cari."%'");				
+	}else{
+		$query = mysql_query("SELECT * FROM admin");		
+	}
+	$no = 1;
+	while($var = mysql_fetch_array($query)){
+	?>
 <tr>
 	<td><?php echo $no; ?></td>
 	<td><?php echo $var['judul']; ?></td>
